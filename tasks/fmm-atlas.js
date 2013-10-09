@@ -79,7 +79,7 @@ module.exports = function(grunt) {
 
           commands.push( src );
 
-      exec(commands.join(' '), function(error, stdout, stderr){ callback(); });
+      exec(commands.join(' '), function(error, stdout, stderr){ if( stderr ) grunt.log.writeln(stderr); callback(); });
     };
 
     var clean = function( dir, callback ){ grunt.file.delete( dir ); callback() };
