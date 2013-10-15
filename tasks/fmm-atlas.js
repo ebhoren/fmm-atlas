@@ -57,6 +57,7 @@ module.exports = function(grunt) {
           commands.push('--scale', options.retina === true ? '1.0' : '0.5' );
           commands.push('--format', 'sparrow');
           commands.push('--pack-mode', 'Best');
+          commands.push('--force-publish');
           commands.push('--scale-mode', 'Smooth');
           commands.push('--algorithm', 'MaxRects');
           commands.push('--maxrects-heuristics', 'Best');
