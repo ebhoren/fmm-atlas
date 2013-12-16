@@ -64,13 +64,13 @@ module.exports = function(grunt) {
           commands.push('--trim-mode', 'None');
           commands.push('--disable-rotation');
           commands.push('--border-padding', 0);
-          commands.push('--max-size', options.retina === true ? 2048 : 1024 );
 
           if( options.atf !== null )
           {
             commands.push('--shape-padding', 2);
             commands.push('--size-constraints', 'POT');
             commands.push('--force-squared');
+            commands.push('--max-size', options.retina === true ? 2048 : 1024 );
           }
           else
           {
